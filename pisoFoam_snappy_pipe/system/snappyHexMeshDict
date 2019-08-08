@@ -120,7 +120,7 @@ castellatedMeshControls
         cylinder
         {
             // Surface-wise min and max refinement level
-            level (2 5);
+            level (3 5);
         }
     }
 
@@ -143,7 +143,7 @@ castellatedMeshControls
 
     refinementRegions
     {
-	topPatchBox
+/*	topPatchBox
 	{
 		mode inside;
 		levels ((1.0 3));
@@ -154,6 +154,7 @@ castellatedMeshControls
                 mode inside;
                 levels ((1.0 3));
         }
+*/
     }
 
 
