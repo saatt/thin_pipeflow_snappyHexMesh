@@ -15,44 +15,25 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-6
+2
 (
-    movingWall
-    {
-        type            patch;
-        nFaces          500;
-        startFace       6475;
-    }
-    fixedWalls
-    {
-        type            patch;
-        nFaces          1500;
-        startFace       6975;
-    }
-    frontAndBack
-    {
-        type            patch;
-        nFaces          50;
-        startFace       8475;
-    }
-    topPatch
-    {
-        type            patch;
-        nFaces          0;
-        startFace       8525;
-    }
-    wall
+    cylinder
     {
         type            wall;
         inGroups        1(wall);
-        nFaces          0;
-        startFace       8525;
+        nFaces          13122;
+        startFace       125867;
     }
-    bottomPatch
+    procBoundary1to0
     {
-        type            patch;
-        nFaces          0;
-        startFace       8525;
+        type            processor;
+        inGroups        1(processor);
+        nFaces          241;
+        startFace       138989;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        1;
+        neighbProcNo    0;
     }
 )
 

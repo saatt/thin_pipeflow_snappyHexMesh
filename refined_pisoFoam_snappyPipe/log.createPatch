@@ -8,12 +8,12 @@
 Build  : v1906 OPENFOAM=1906
 Arch   : "LSB;label=32;scalar=64"
 Exec   : createPatch -overwrite
-Date   : Aug 15 2019
-Time   : 17:06:33
-Host   : DESKTOP-9S60IA4
-PID    : 2697
+Date   : Aug 26 2019
+Time   : 07:56:56
+Host   : LAPTOP-FK3MEHTI
+PID    : 1255
 I/O    : uncollated
-Case   : /home/theodore_ong/GitHub_software/thin_pipeflow_snappyHexMesh/turb_pisoFoam_snappy_pipe
+Case   : /home/theodore_ong/GitHub_OpenFoam_workspace/thin_pipeflow_snappyHexMesh/refined_pisoFoam_snappyPipe
 nProcs : 1
 trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
@@ -26,25 +26,25 @@ Create polyMesh for time = 0
 
 Reading "system/createPatchDict"
 
-Adding new patch topPatch as patch 1 from 
+Adding new patch topPatch as patch 3 from 
 {
     type            patch;
 }
 
-Adding new patch wall as patch 2 from 
+Adding new patch wall as patch 4 from 
 {
     type            wall;
 }
 
-Adding new patch bottomPatch as patch 3 from 
+Adding new patch bottomPatch as patch 5 from 
 {
     type            patch;
 }
 
 
-Read 1768 faces from faceSet topPatch
-Read 46048 faces from faceSet wall
-Read 1768 faces from faceSet bottomPatch
+Read 0 faces from faceSet topPatch
+Read 0 faces from faceSet wall
+Read 0 faces from faceSet bottomPatch
 
 Doing topology modification to order faces.
 
@@ -52,8 +52,7 @@ Not synchronising points.
 
 Removing patches with no faces in them.
 
-Removing zero-sized patch cylinder type wall at position 0
-Removing patches.
+No patches removed.
 Writing repatched mesh to 0
 
 End
