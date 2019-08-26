@@ -9,12 +9,12 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       regIOobject;
+    class       labelList;
     location    "constant/polyMesh";
-    object      faceZones;
+    object      boundaryProcAddressing;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-0()
+5(0 1 2 -1 -1)
 
 // ************************************************************************* //

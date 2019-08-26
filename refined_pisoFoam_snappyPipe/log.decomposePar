@@ -9,11 +9,11 @@ Build  : v1906 OPENFOAM=1906
 Arch   : "LSB;label=32;scalar=64"
 Exec   : decomposePar
 Date   : Aug 26 2019
-Time   : 07:56:27
-Host   : LAPTOP-FK3MEHTI
-PID    : 1228
+Time   : 10:54:47
+Host   : DESKTOP-9S60IA4
+PID    : 3521
 I/O    : uncollated
-Case   : /home/theodore_ong/GitHub_OpenFoam_workspace/thin_pipeflow_snappyHexMesh/refined_pisoFoam_snappyPipe
+Case   : /home/theodore_ong/GitHub_software/thin_pipeflow_snappyHexMesh/refined_pisoFoam_snappyPipe
 nProcs : 1
 trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
@@ -31,7 +31,7 @@ Create mesh
 Calculating distribution of cells
 Selecting decompositionMethod scotch [4]
 
-Finished decomposition in 0.03 s
+Finished decomposition in 0.32 s
 
 Calculating original mesh data
 
@@ -42,41 +42,44 @@ Distributing faces to processors
 Distributing points to processors
 
 Constructing processor meshes
+Reading hexRef8 data : cellLevel
+Reading hexRef8 data : pointLevel
+Reading hexRef8 data : level0Edge
 
 Processor 0
-    Number of cells = 625
-    Number of faces shared with processor 1 = 25
-    Number of processor patches = 1
-    Number of processor faces = 25
-    Number of boundary faces = 525
+    Number of cells = 43248
+    Number of faces shared with processor 1 = 220
+    Number of faces shared with processor 3 = 220
+    Number of processor patches = 2
+    Number of processor faces = 440
+    Number of boundary faces = 11872
 
 Processor 1
-    Number of cells = 625
-    Number of faces shared with processor 0 = 25
-    Number of faces shared with processor 3 = 25
-    Number of processor patches = 2
-    Number of processor faces = 50
-    Number of boundary faces = 500
+    Number of cells = 43024
+    Number of faces shared with processor 0 = 220
+    Number of processor patches = 1
+    Number of processor faces = 220
+    Number of boundary faces = 13032
 
 Processor 2
-    Number of cells = 625
-    Number of faces shared with processor 3 = 25
+    Number of cells = 42616
+    Number of faces shared with processor 3 = 220
     Number of processor patches = 1
-    Number of processor faces = 25
-    Number of boundary faces = 525
+    Number of processor faces = 220
+    Number of boundary faces = 12920
 
 Processor 3
-    Number of cells = 625
-    Number of faces shared with processor 1 = 25
-    Number of faces shared with processor 2 = 25
+    Number of cells = 42840
+    Number of faces shared with processor 0 = 220
+    Number of faces shared with processor 2 = 220
     Number of processor patches = 2
-    Number of processor faces = 50
-    Number of boundary faces = 500
+    Number of processor faces = 440
+    Number of boundary faces = 11760
 
-Number of processor faces = 75
-Max number of cells = 625 (0% above average 625)
+Number of processor faces = 660
+Max number of cells = 43248 (0.736048% above average 42932)
 Max number of processor patches = 2 (33.3333% above average 1.5)
-Max number of faces between processors = 50 (33.3333% above average 37.5)
+Max number of faces between processors = 440 (33.3333% above average 330)
 
 Time = 0
 

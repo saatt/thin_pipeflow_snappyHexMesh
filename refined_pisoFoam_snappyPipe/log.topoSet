@@ -9,11 +9,11 @@ Build  : v1906 OPENFOAM=1906
 Arch   : "LSB;label=32;scalar=64"
 Exec   : topoSet
 Date   : Aug 26 2019
-Time   : 07:56:55
-Host   : LAPTOP-FK3MEHTI
-PID    : 1254
+Time   : 10:54:41
+Host   : DESKTOP-9S60IA4
+PID    : 3518
 I/O    : uncollated
-Case   : /home/theodore_ong/GitHub_OpenFoam_workspace/thin_pipeflow_snappyHexMesh/refined_pisoFoam_snappyPipe
+Case   : /home/theodore_ong/GitHub_software/thin_pipeflow_snappyHexMesh/refined_pisoFoam_snappyPipe
 nProcs : 1
 trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
@@ -31,52 +31,44 @@ Time = 0
 Created faceSet cylinder
     Applying source patchToFace
     Adding all faces of patches 1(cylinder) ...
---> FOAM Warning : 
-    From function Foam::labelHashSet Foam::polyBoundaryMesh::patchSet(const Foam::UList<Foam::wordRe>&, bool, bool) const
-    in file meshes/polyMesh/polyBoundaryMesh/polyBoundaryMesh.C at line 868
-    Cannot find any patch or group names matching cylinder
---> FOAM Warning : 
-    From function void Foam::patchToFace::combine(Foam::topoSet&, bool) const
-    in file sets/faceSources/patchToFace/patchToFace.C at line 100
-    Cannot find any patches matching 1(cylinder)
-Valid names are 3(movingWall fixedWalls frontAndBack)
-    faceSet cylinder now size 0
+    Found matching patch cylinder with 49584 faces.
+    faceSet cylinder now size 49584
 Created faceSet bottom_patch_negative
     Applying source boxToFace
     Adding faces with centre within boxes 1((-0.6 -0.6 0.01) (0.6 0.6 41))
-    faceSet bottom_patch_negative now size 3220
+    faceSet bottom_patch_negative now size 543524
 Created faceSet top_patch_negative
     Applying source boxToFace
     Adding faces with centre within boxes 1((-0.6 -0.6 -1) (0.6 0.6 39.99))
-    faceSet top_patch_negative now size 3210
+    faceSet top_patch_negative now size 543524
 Created faceSet bottomPatch
     Applying source faceToFace
     Adding all elements of faceSet 1(cylinder)
-    faceSet bottomPatch now size 0
-Read set faceSet bottomPatch with size 0
+    faceSet bottomPatch now size 49584
+Read set faceSet bottomPatch with size 49584
     Applying source faceToFace
     Removing all elements of faceSet 1(bottom_patch_negative)
-    faceSet bottomPatch now size 0
+    faceSet bottomPatch now size 1768
 Created faceSet topPatch
     Applying source faceToFace
     Adding all elements of faceSet 1(cylinder)
-    faceSet topPatch now size 0
-Read set faceSet topPatch with size 0
+    faceSet topPatch now size 49584
+Read set faceSet topPatch with size 49584
     Applying source faceToFace
     Removing all elements of faceSet 1(top_patch_negative)
-    faceSet topPatch now size 0
+    faceSet topPatch now size 1768
 Created faceSet wall
     Applying source faceToFace
     Adding all elements of faceSet 1(cylinder)
-    faceSet wall now size 0
-Read set faceSet wall with size 0
+    faceSet wall now size 49584
+Read set faceSet wall with size 49584
     Applying source faceToFace
     Removing all elements of faceSet 1(bottomPatch)
-    faceSet wall now size 0
-Read set faceSet wall with size 0
+    faceSet wall now size 47816
+Read set faceSet wall with size 47816
     Applying source faceToFace
     Removing all elements of faceSet 1(topPatch)
-    faceSet wall now size 0
+    faceSet wall now size 46048
 
 End
 

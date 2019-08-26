@@ -15,21 +15,33 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-2
+4
 (
-    cylinder
+    topPatch
+    {
+        type            patch;
+        nFaces          0;
+        startFace       124908;
+    }
+    wall
     {
         type            wall;
         inGroups        1(wall);
-        nFaces          13122;
-        startFace       125867;
+        nFaces          11264;
+        startFace       124908;
+    }
+    bottomPatch
+    {
+        type            patch;
+        nFaces          1768;
+        startFace       136172;
     }
     procBoundary1to0
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          241;
-        startFace       138989;
+        nFaces          220;
+        startFace       137940;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        1;

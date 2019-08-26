@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v1812                                 |
+|  \\    /   O peration     | Version:  v1906                                 |
 |   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -17,7 +17,8 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 3.75e-5;
+
+internalField   uniform 3.75e-05;
 
 boundaryField
 {
@@ -28,13 +29,18 @@ boundaryField
     wall
     {
         type            kqRWallFunction;
-        value           $internalField;
+        value           uniform 3.75e-05;
     }
     bottomPatch
     {
         type            turbulentIntensityKineticEnergyInlet;
         intensity       0.05;
-	value		$internalField;
+        value           uniform 3.75e-05;
+    }
+    procBoundary1to0
+    {
+        type            processor;
+        value           uniform 3.75e-05;
     }
 }
 
