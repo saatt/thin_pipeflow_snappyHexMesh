@@ -5,15 +5,17 @@ cd ${0%/*} || exit 1                        # Run from this directory
 . $WM_PROJECT_DIR/bin/tools/RunFunctions    # Tutorial run functions
 
 runApplication blockMesh
-
-runApplication snappyHexMesh -overwrite
-restore0Dir 
-runApplication topoSet
-runApplication createPatch -overwrite
+restore0Dir
+decomposePar > log.meshDecomposePar
+runParallel snappyHexMesh -overwrite
+runParallel topoSet
+runParallel createPatch -overwrite
+reconstructParMesh -constant -mergeTol 1E-06 > log.reconstructParMesh
 touch refined_snappy_pipe.foam
 
 
-runApplication decomposePar
-runParallel pisoFoam
-runApplication reconstructPar
+#restore0Dir
+#runApplication decomposePar
+#runParallel pisoFoam
+#runApplication reconstructPar
 #reconstruction complete :) means i can view results...
